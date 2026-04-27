@@ -1,0 +1,30 @@
+"""
+Bon,chef, sergent-chef ce fichier est spéciale.
+il contient les data de notre site, Vapeur, un site de vente de jeux comme steam, car on veut faire de la concurrence ici.
+Ici c'est pour les profils des utilisateurs, on peut y ajouter d'autres champs comme le mot de passe, la date de naissance, etc.
+"""
+
+{
+    "users": [
+        {
+            "id": 1,
+            "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            "username": "CoolFever14",
+            "email": "evan.sedda@ynov.com",
+            "portefeuille": 0.00,
+            "date_de_naissance": "2007-12-31",
+            "mot_de_passe": "azerty",
+            "jeux": []
+        },
+        {
+            "id": 2,
+            "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            "username": "bastou",
+            "email": "hugo.paulier@ynov.com",
+            "portefeuille": 0.00,
+            "date_de_naissance": "2002-09-12",
+            "mot_de_passe": "qwerty",
+            "jeux": []
+        },
+    ]
+}

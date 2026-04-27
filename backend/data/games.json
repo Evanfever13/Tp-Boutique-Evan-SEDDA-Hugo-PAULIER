@@ -1,0 +1,21 @@
+"""
+bon ici c'est le fichier données pour les jeux
+"""
+
+{
+    "games" : {
+        "1" : {
+            "id": 1,
+            "nom": "The Legend of Zelda: Breath of the Wild",
+            "image": "https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+            "description": "Explore the vast kingdom of Hyrule in this critically acclaimed action-adventure game.",
+            "prix": 59.99,
+            "reduction": 0.2,
+            "avis" : "Extrêmeent bon",
+            "date_de_sortie": "2017-03-03",
+            "genre": "Action-Adventure",
+            "developpeur": "Nintendo",
+            "éditeur": "Nintendo"
+        },
+    }
+}

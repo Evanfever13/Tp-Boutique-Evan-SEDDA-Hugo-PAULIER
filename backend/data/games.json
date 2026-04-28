@@ -1,17 +1,45 @@
 {
-    "games" : {
-        "1" : {
-            "id": 1,
-            "nom": "Marvel Spider-Man 2",
-            "image": "pas de lien image",
-            "description": "Sauve des gars",
+    "games": [
+        {
+            "id": "hugo",
+            "game": "The Witcher 3: Wild Hunt",
+            "promotion": null,
+            "prix": 39.99,
+            "genre": "RPG",
+            "image": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1663054020"
+        },
+        {
+            "id": "hugo",
+            "game": "Cyberpunk 2077",
+            "promotion": null,
             "prix": 59.99,
-            "reduction": 0.2,
-            "avis" : "Extrêmeent bon",
-            "date_de_sortie": "2025-03-03",
+            "genre": "RPG",
+            "image": "https://cdn.akamai.steamstatic.com/steam/apps/1497640/header.jpg?t=1663054020"
+        },
+        {
+            "id": "hugo",
+            "game": "Red Dead Redemption 2",
+            "promotion": null,
+            "prix": 49.99,
             "genre": "Action-Adventure",
-            "developpeur": "Insomniac",
-            "éditeur": "Sony Interactive Entertainment"
+            "image": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1663054020"
+        },
+        {
+            "id": "hugo",
+            "game": "The Legend of Zelda: Breath of the Wild",
+            "promotion": null,
+            "prix": 59.99,
+            "genre": "Action-Adventure",
+            "image": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1663054020"
+        },
+        {
+            "id": "hugo",
+            "game": "Dark Souls III",
+            "promotion": null,
+            "prix": 29.99,
+            "genre": "RPG",
+            "image": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1663054020"
         }
-    }
+    ]
 }
+

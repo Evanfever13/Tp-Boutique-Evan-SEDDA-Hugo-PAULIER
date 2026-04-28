@@ -2,12 +2,17 @@
 
 // je vais faire une fonction pour lire et écrire dans un fichier json, encore du gain de temps x3
 const fs = require('fs');
+// comme je l'ai dis dans users.js, pour palier au probième de chemin, on va utiliser le module path
+const path = require('path');
+
+// nouveau problème d'import, donc je déclare une variable dataPath directement
+const dataPath = path.join(__dirname, '../data/games.json');
 
 // fonction pour lire les données des jeux
 function readGames() {
     try {
-        const data = fs.readFileSync('../data/games.json');
-        return JSON.parse(data);
+        const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+        return data.games;
     } catch (err) {        
         return [];
     }
@@ -15,7 +20,7 @@ function readGames() {
 
 // fonction pour écrire les données des jeux
 function writeGames(games) {
-    fs.writeFileSync('../data/games.json', JSON.stringify(games));
+    fs.writeFileSync(dataPath, JSON.stringify(games));
 }
 
 // fonction pour ajouter un jeu à sa bibliothèque (jeux possédés), avec la vérification
@@ -112,7 +117,7 @@ function removeGameFromStore(game) {
 // fonction pour chercher tous les jeux disponibles dans le magasin, avec la vérification
 function getStoreGames() {
     const games = readGames();
-    const storeGames = games.filter(g => !g.username).map(g => g.game);
+    const storeGames = games.filter(g => !g.id).map(g => g.game);
     if (storeGames.length > 0) {
         return {
             success: true,

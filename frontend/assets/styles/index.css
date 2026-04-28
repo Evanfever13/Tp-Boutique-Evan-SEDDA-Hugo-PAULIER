@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: sans;
+    src: url("../font/Ldfcomicsansbold-zgma.ttf");
+}
+
+body{
+    background-color: rgb(23, 29, 37);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100vw;
+    color:azure;
+    align-items: center;
+}
+
+header img{
+    height: 75px;
+    width: auto;
+}
+
+header a p{
+    gap: 10px;
+    color:azure;
+}
+
+
+header{
+ gap: 10px;
+}
+
+

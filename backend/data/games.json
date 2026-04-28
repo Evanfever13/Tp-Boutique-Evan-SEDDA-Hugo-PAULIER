@@ -1,6 +1,7 @@
 {
     "games": [
         {
+            "id": 1,
             "game": "The Witcher 3: Wild Hunt",
             "editeur": "CD Projekt",
             "promotion": null,
@@ -9,6 +10,7 @@
             "image": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1663054020"
         },
         {
+            "id": 2,
             "game": "Cyberpunk 2077",
             "promotion": null,
             "editeur": "CD Projekt",
@@ -17,6 +19,7 @@
             "image": "https://cdn.akamai.steamstatic.com/steam/apps/1497640/header.jpg?t=1663054020"
         },
         {
+            "id": 3,
             "game": "Red Dead Redemption 2",
             "editeur": "Rockstar Games",
             "promotion": null,
@@ -25,6 +28,7 @@
             "image": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1663054020"
         },
         {
+            "id": 4,
             "game": "The Legend of Zelda: Breath of the Wild",
             "editeur": "Nintendo",
             "promotion": null,
@@ -33,6 +37,7 @@
             "image": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1663054020"
         },
         {
+            "id": 5,
             "game": "Dark Souls III",
             "editeur": "FromSoftware",
             "promotion": null,

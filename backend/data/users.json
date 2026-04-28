@@ -1,0 +1,26 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            "username": "CoolFever14",
+            "email": "evan.sedda@ynov.com",
+            "portefeuille": 0.00,
+            "date_de_naissance": "2007-12-31",
+            "mot_de_passe": "azerty",
+            "amis": [],
+            "jeux": []
+        },
+        {
+            "id": 2,
+            "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            "username": "bastou",
+            "email": "hugo.paulier@ynov.com",
+            "portefeuille": 0.00,
+            "date_de_naissance": "2002-09-12",
+            "mot_de_passe": "qwerty",
+            "amis": [],
+            "jeux": []
+        }
+    ]
+}

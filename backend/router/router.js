@@ -34,6 +34,19 @@ router.get('/promotions', (req, res) => {
 	res.json(games.getStoreGames());
 });
 
+router.get('/genres', (req, res) => {
+	res.json(games.getGamesByGenre(req.query.genre));
+});
+
+router.get('/prices', (req, res) => {
+	res.json(games.getGamesByPrice(req.query.price));
+});
+
+router.get('/pages', (req, res) => {
+	res.json(games.getGamebyPage(req.query.page));
+});
+
+// partie utilisateurs
 router.post('/users/register', (req, res) => {
 	res.json(users.registerUser(req.body.username, req.body.password));
 });

@@ -126,6 +126,7 @@ function getStoreGames() {
     }
 
     const storeGames = games.map(g => ({
+        id: g.id,
         game: g.game,
         prix: g.prix,
         image: g.image

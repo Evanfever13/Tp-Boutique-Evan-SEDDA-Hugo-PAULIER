@@ -76,7 +76,7 @@ function getAllGames() {
         return {
             success: true,
             message: 'Jeux trouvés',
-            games: games.map(g => g.game) };
+            games: games };
     }
     return {
         success: false,
@@ -114,20 +114,32 @@ function removeGameFromStore(game) {
         message: 'Jeu non trouvé dans le magasin' };
 }
 
-// fonction pour chercher tous les jeux disponibles dans le magasin, avec la vérification
+// fonction pour chercher tous les jeux disponibles dans le magasin avec leur prix et image, avec la vérification
 function getStoreGames() {
     const games = readGames();
-    const storeGames = games.filter(g => !g.id).map(g => g.game);
-    if (storeGames.length > 0) {
+
+    if (!games || games.length === 0) {
         return {
-            success: true,
-            message: 'Jeux trouvés dans le magasin',
-            games: storeGames };
+            success: false,
+            message: 'Aucun jeu trouvé dans le magasin'
+        };
     }
+
+    const storeGames = games.map(g => ({
+        id: g.id,
+        game: g.game,
+        prix: g.prix,
+        image: g.image
+    }));
+
     return {
-        success: false,
-        message: 'Aucun jeu trouvé dans le magasin' };
+        success: true,
+        message: 'Jeux trouvés dans le magasin',
+        games: storeGames
+    };
 }
+
+
 
 // fonction pour ajouter une promotion à un jeu, avec la vérification
 function addPromotion(game, promotion) {
@@ -161,6 +173,59 @@ function removePromotion(game) {
         message: 'Jeu non trouvé pour supprimer la promotion' };
 }
 
+// fonction pour trier selon le genre + verif
+function getGamesByGenre(genre) {
+    const games = readGames();
+    const genreGames = games.filter(g => g.genre === genre).map(g => g.game);
+    if (genreGames.length > 0) {
+        return {
+            success: true,
+            message: 'Jeux trouvés pour le genre',
+            games: genreGames };
+    }
+    return {
+        success: false,
+        message: 'Aucun jeu trouvé pour ce genre' };
+}
+
+// fonction pour trier selon le prix + verif
+function getGamesByPrice(price) {
+    const games = readGames();
+    const priceGames = games.filter(g => g.price <= price).map(g => g.game);
+    if (priceGames.length > 0) {
+        return {
+            success: true,
+            message: 'Jeux trouvés pour le prix',
+            games: priceGames };
+    }
+    return {
+        success: false,
+        message: 'Aucun jeu trouvé pour ce prix' };
+}
+
+// fonction pour gérer la pagination 10 par 10 par page pour le evan , avec bien sur la vérification
+function getGamebyPage(page){
+    const games = readGames();
+    const pageSize = 10;
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedGames = games.slice(startIndex, endIndex).map(g => g.game);
+    if (paginatedGames.length > 0) {
+        return {
+            success: true,
+            message: 'Jeux trouvés pour la page',
+            games: paginatedGames };
+    }
+    return {
+        success: false,
+        message: 'Aucun jeu trouvé pour cette page' 
+    };
+}
+
+
+
+
+
 
 // on exporte les fonctions pour les utiliser dans les routes
 module.exports = {
@@ -172,5 +237,7 @@ module.exports = {
     removeGameFromStore,
     getStoreGames,
     addPromotion,
-    removePromotion
+    removePromotion,
+    getGamesByGenre,
+    getGamesByPrice
 };

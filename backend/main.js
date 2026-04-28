@@ -9,5 +9,6 @@ app.use('/', router);
 
 app.listen(port, () => {
     console.log(`Serveur démarré sur le port ${port}`);
-    console.log(`Lien du serveur http://localhost:${port}/home`);
+    console.log(`Lien pour vérifier le backend: http://localhost:${port}/home`);
+    console.log(`on va le supp pour la version finale`);
 });

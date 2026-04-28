@@ -5,8 +5,9 @@ const router = require('./router/router');
 const port = 8080;
 
 app.use(express.json());
-app.use('/home', router);
+app.use('/', router);
 
 app.listen(port, () => {
     console.log(`Serveur démarré sur le port ${port}`);
+    console.log(`Lien du serveur http://localhost:${port}/home`);
 });

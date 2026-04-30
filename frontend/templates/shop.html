@@ -11,20 +11,26 @@
     <header>
 
         <img src="../assets/img/logo.png" alt="logo"></img>
-        <h2>Vapeur</h2>
-        <a href="/shop"><p>Magasin</p></a>
-        <a href="/library"><p>Bibliotheque</p></a>
-        <a href="/about"><p>A Propos</p></a>
+        <a href="./index.html"><h2>Vapeur</h2></a>
+        <a href="./shop.html"><p>Magasin</p></a>
+        <a href="./library.html"><p>Bibliotheque</p></a>
+        <a href="./about.html"><p>A Propos</p></a>
+
+        <button class="cart-btn" aria-label="Voir le panier"><img src="../assets/img/Panier.png" alt="Panier"></button>
  
 
     </header>
 
-        <form action="search">
-            <input type="text" placeholder="Rechercher...">
+        <form id="searchForm" class="search-bar" role="search" aria-label="Recherche de jeux">
+            <input id="searchInput" type="search" placeholder="Rechercher un jeu..." aria-label="Rechercher un jeu">
+            <button id="searchButton" type="submit">Rechercher</button>
+            <button id="clearSearch" type="button" aria-label="Effacer la recherche">×</button>
         </form>
 
-    <section>
-        
+    <section class="shop">
+
     </section>
+
+    <script src="../script/shop.js"></script>
 </body>
 </html>

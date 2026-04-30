@@ -12,16 +12,22 @@
 }
 
 body{
-    background-color: rgb(23, 29, 37);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(27, 40, 56)
 }
+
+/*HEADER*/
 
 header{
     display: flex;
+    flex: 1 1 auto;
     flex-direction: row;
     height: 10vh;
     width: 100vw;
     color:azure;
     align-items: center;
+    background-color: rgb(23, 29, 37);
 }
 
 header img{
@@ -30,13 +36,110 @@ header img{
 }
 
 header a p{
-    gap: 10px;
+    margin-left: 50px;
     color:azure;
 }
 
-
-header{
- gap: 10px;
+ header a h2{
+    margin-left: 10px;
+    color:azure;
 }
 
+/* Cart button positioned to the right */
+.cart-btn{
+    margin-left: auto;
+    margin-right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.cart-btn img{
+    height: 36px;
+    width: auto;
+}
 
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0;
+    width: 100%;
+}
+
+/* Search bar */
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 70vw;
+    max-width: 720px;
+    margin: 0 auto; 
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.search-bar input[type="search"]{
+    flex: 1 1 auto;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgb(35,45,60);
+    color: #fff;
+    outline: none;
+}
+
+.search-bar button{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgb(190, 238, 17);
+    color: #0b0b0b;
+    cursor: pointer;
+}
+.search-bar button#clearSearch{
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    font-size: 20px;
+    padding: 4px 8px;
+}
+
+/*PRODUIT*/
+
+.shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product{
+    display: flex;
+    justify-content: start;
+    background-color: rgb(22, 32, 45);
+    height: 10vh;
+    width: 70vw;
+    margin-top: 10px;
+ }   
+
+.product h2{
+    color: azure;
+}
+.product h3{
+    color: rgb(190, 238, 17); 
+}
+
+.product img{
+    height: 100%;
+    width: auto;
+    margin-right: 10px;
+}
+.product h2{
+    flex: 1 1 auto;
+    align-self: center;
+}
+.product h3{
+    margin-left: auto;
+    align-self: center;
+}

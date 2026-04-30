@@ -22,6 +22,18 @@ router.delete('/home', (req, res) => {
 	res.json(games.removeGameFromStore(req.body.game));
 });
 
+router.get('/game/:id', (req, res) => {
+	res.json(games.getGameById(req.params.id));
+});
+
+router.get('/store', (req, res) => {
+	res.json(games.getStoreGames());
+});
+
+router.get('/user/games', (req, res) => {
+	res.json(games.getUserGames(req.query.username));
+});
+
 router.post('/promotions', (req, res) => {
 	res.json(games.addPromotion(req.body.game, req.body.promotion));
 });

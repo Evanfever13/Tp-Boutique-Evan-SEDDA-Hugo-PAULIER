@@ -12,15 +12,19 @@ const dataPath = path.join(__dirname, '../data/games.json');
 function readGames() {
     try {
         const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-        return data.games;
-    } catch (err) {        
+        if (Array.isArray(data)) {
+            return data;
+        }
+        return data.games || [];
+    } catch (err) {
+        console.error('Error reading games.json from', dataPath, ':', err.message);
         return [];
     }
 }
 
 // fonction pour écrire les données des jeux
 function writeGames(games) {
-    fs.writeFileSync(dataPath, JSON.stringify(games));
+    fs.writeFileSync(dataPath, JSON.stringify(games, null, 2));
 }
 
 // fonction pour ajouter un jeu à sa bibliothèque (jeux possédés), avec la vérification
@@ -188,21 +192,6 @@ function getGamesByGenre(genre) {
         message: 'Aucun jeu trouvé pour ce genre' };
 }
 
-// fonction pour trier selon le prix + verif
-function getGamesByPrice(price) {
-    const games = readGames();
-    const priceGames = games.filter(g => g.price <= price).map(g => g.game);
-    if (priceGames.length > 0) {
-        return {
-            success: true,
-            message: 'Jeux trouvés pour le prix',
-            games: priceGames };
-    }
-    return {
-        success: false,
-        message: 'Aucun jeu trouvé pour ce prix' };
-}
-
 // fonction pour gérer la pagination 10 par 10 par page pour le evan , avec bien sur la vérification
 function getGamebyPage(page){
     const games = readGames();
@@ -222,8 +211,51 @@ function getGamebyPage(page){
     };
 }
 
+// fonction qui cherche un jeux selon son id, avec la vérification
+function getGameById(id) {
+    const games = readGames();
+    const game = games.find(g => g.id === parseInt(id));
+    if (game) {
+        return {
+            success: true,
+            message: 'Jeu trouvé pour l\'id',
+            game: game };
+    }
+    return {
+        success: false,
+        message: 'Aucun jeu trouvé pour cet id' 
+    };
+}
 
+// fonction pour chercher un jeu selon son genre, avec la vérification
+function getGamesByGenre(genre) {
+    const games = readGames();
+    const genreGames = games.filter(g => g.genre === genre).map(g => g.game);
+    if (genreGames.length > 0) {
+        return {
+            success: true,
+            message: 'Jeux trouvés pour le genre',
+            games: genreGames };
+    }
+    return {
+        success: false,
+        message: 'Aucun jeu trouvé pour ce genre' };
+}
 
+// fonction pour chercher un jeu selon son prix, avec la vérification
+function getGamesByPrice(price) {
+    const games = readGames();
+    const priceGames = games.filter(g => g.prix <= price).map(g => g.game);
+    if (priceGames.length > 0) {
+        return {
+            success: true,
+            message: 'Jeux trouvés pour le prix',
+            games: priceGames };
+    }
+    return {
+        success: false,
+        message: 'Aucun jeu trouvé pour ce prix' };
+}
 
 
 
@@ -239,5 +271,7 @@ module.exports = {
     addPromotion,
     removePromotion,
     getGamesByGenre,
-    getGamesByPrice
+    getGamesByPrice,
+    getGamebyPage,
+    getGameById
 };

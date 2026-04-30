@@ -1,50 +1,74 @@
-{
-    "games": [
-        {
-            "id": 1,
-            "game": "The Witcher 3: Wild Hunt",
-            "editeur": "CD Projekt",
-            "promotion": null,
-            "prix": 39.99,
-            "genre": "RPG",
-            "image": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1663054020"
-        },
-        {
-            "id": 2,
-            "game": "Cyberpunk 2077",
-            "promotion": null,
-            "editeur": "CD Projekt",
-            "prix": 59.99,
-            "genre": "RPG",
-            "image": "https://cdn.akamai.steamstatic.com/steam/apps/1497640/header.jpg?t=1663054020"
-        },
-        {
-            "id": 3,
-            "game": "Red Dead Redemption 2",
-            "editeur": "Rockstar Games",
-            "promotion": null,
-            "prix": 49.99,
-            "genre": "Action-Adventure",
-            "image": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1663054020"
-        },
-        {
-            "id": 4,
-            "game": "The Legend of Zelda: Breath of the Wild",
-            "editeur": "Nintendo",
-            "promotion": null,
-            "prix": 59.99,
-            "genre": "Action-Adventure",
-            "image": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1663054020"
-        },
-        {
-            "id": 5,
-            "game": "Dark Souls III",
-            "editeur": "FromSoftware",
-            "promotion": null,
-            "prix": 29.99,
-            "genre": "RPG",
-            "image": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1663054020"
-        }
-    ]
-}
-
+[
+  {
+    "id": 1,
+    "game": "Blanc et Noir : Sortie 67",
+    "image": "images/blanc_et_noir.png",
+    "description": "Arrête la malédiction qui frappe la ville de Sortie 67 dans ce jeu d'aventure captivant. Explore des environnements mystérieux, résous des énigmes complexes et affronte des créatures redoutables pour sauver la ville de l'obscurité imminente.",
+    "prix": 67.67,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2025-03-03",
+    "genre": "Action-Aventure",
+    "developpeur": "Sandbox Games",
+    "editeur": "Sandbox Games"
+  },
+  {
+    "id": 2,
+    "game": "Anneau d'elden",
+    "image": "images/anneau-elden.png",
+    "description": "Explore le monde de Elden Ring dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
+    "prix": 59.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2020-03-03",
+    "genre": "Action-Aventure",
+    "developpeur": "FromSoftware",
+    "editeur": "Bandai Namco Entertainment"
+  },
+  {
+    "id": 3,
+    "game": "Chevalier vidé par sa femme",
+    "image": "images/chevalier.png",
+    "description": "flemme je ne connais pas le jeux, achete et joue .",
+    "prix": 39.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2017-03-03",
+    "genre": "Action-Aventure",
+    "developpeur": "Team Cherry",
+    "editeur": "Team Cherry"
+  },
+  {
+    "id": 4,
+    "game": "Montagne dépressif",
+    "image": "images/montagne.png",
+    "description": "En gros, tu montes une montagne avec ton double dépressif (wtf d'ou il sort) .",
+    "prix": 9.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2018-01-25",
+    "genre": "Action-Aventure",
+    "developpeur": "Extremely OK Games",
+    "editeur": "Extremely OK Games"
+  },
+  {
+    "id": 5,
+    "game": "Merveilleux Spoudeur-Men deux",
+    "image": "images/spooder-man.png",
+    "description": "Je suis entrain de jouer le jeux, c'est du poulet masterclass, achète, il fait honneur au Spoudeur-Man un.",
+    "prix": 89.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2023-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Extremely OK Games",
+    "editeur": "Extremely OK Games"
+  },
+  {
+    "id": 6,
+    "game": "Montagne Joyeuse",
+    "image": "images/montagne_joyeuse.png",
+    "description": "ne tombe pas, sinon tu meurs.",
+    "prix": 9.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2023-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Extremely OK Games",
+    "editeur": "Extremely OK Games"
+  }
+]

@@ -1,6 +1,8 @@
-pannier = document.querySelector('.Pannier');
+const pannier = document.querySelector('.Pannier');
 
 function loadPannier() {
+    if (!pannier) return;
+    pannier.innerHTML = '';
     const items = Object.keys(localStorage).filter(key => key.startsWith('pannier_'));
     if (items.length === 0) {
         pannier.textContent = 'Votre panier est vide.';
@@ -23,10 +25,19 @@ function loadPannier() {
             localStorage.removeItem(key);
             loadPannier();
         });
+        const buyBtn = document.createElement('button');
+        buyBtn.textContent = 'Acheter';
+        buyBtn.addEventListener('click', () => {
+            localStorage.removeItem(key);
+            localStorage.setItem(`achat_${game.id}`, JSON.stringify(game));
+            loadPannier();
+            alert(`Merci pour votre achat de ${game.game} !`);
+        });
         item.appendChild(img);
         item.appendChild(title);
         item.appendChild(price);
         item.appendChild(removeBtn);
+        item.appendChild(buyBtn);
         pannier.appendChild(item);
     }
 }

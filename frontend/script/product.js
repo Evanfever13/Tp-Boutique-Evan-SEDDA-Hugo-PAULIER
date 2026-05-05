@@ -33,6 +33,7 @@ function renderProductDetail(g) {
     product.appendChild(genre);
     product.appendChild(date);
     product.appendChild(dev);
+    product.appendChild(pannier);
     product.appendChild(editeur);
 }
 

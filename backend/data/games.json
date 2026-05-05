@@ -2,7 +2,7 @@
   {
     "id": 1,
     "game": "Blanc et Noir : Sortie 67",
-    "image": "data/images/67.png",
+    "image": "../../backend/data/images/67.png",
     "description": "Arrête la malédiction qui frappe la ville de Sortie 67 dans ce jeu d'aventure captivant. Explore des environnements mystérieux, résous des énigmes complexes et affronte des créatures redoutables pour sauver la ville de l'obscurité imminente.",
     "prix": 67.67,
     "avis": "Extrêmeent bon",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "game": "Anneau d'elden",
-    "image": "data/images/anneau-elden.png",
+    "image": "../../backend/data/images/anneau-elden.png",
     "description": "Explore le monde de Elden Ring dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
     "prix": 59.99,
     "avis": "Extrêmeent bon",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "game": "Chevalier vidé par sa femme",
-    "image": "data/images/chevalier.png",
+    "image": "../../backend/data/images/chevalier.png",
     "description": "flemme je ne connais pas le jeux, achete et joue .",
     "prix": 39.99,
     "avis": "Extrêmeent bon",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "game": "Montagne dépressif",
-    "image": "data/images/montagne.png",
+    "image": "../../backend/data/images/montagne.png",
     "description": "En gros, tu montes une montagne avec ton double dépressif (wtf d'ou il sort) .",
     "prix": 9.99,
     "avis": "Extrêmeent bon",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "game": "Merveilleux Spoudeur-Men deux",
-    "image": "data/images/spooder-man.png",
+    "image": "../../backend/data/images/spooder-man.png",
     "description": "Je suis entrain de jouer le jeux, c'est du poulet masterclass, achète, il fait honneur au Spoudeur-Man un.",
     "prix": 89.99,
     "avis": "Extrêmeent bon",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "game": "Montagne Joyeuse",
-    "image": "data/images/montagne_joyeuse.png",
+    "image": "../../backend/data/images/montagne_joyeuse.png",
     "description": "ne tombe pas, sinon tu meurs.",
     "prix": 9.99,
     "avis": "Extrêmeent bon",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "game": "Al'huide",
-    "image": "data/images/alhuile.png",
+    "image": "../../backend/data/images/alhuile.png",
     "description": "masterchef du poulet, tu vas devoir cuisiner un poulet pour le faire devenir un al'huide, c'est un jeu de cuisine, mais avec du poulet.",
     "prix": 19.99,
     "avis": "Extrêmeent bon",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "game": "Ultrabonk",
-    "image": "data/images/ultrabonk.png",
+    "image": "../../backend/data/images/ultrabonk.png",
     "description": "Explore le monde de Ultrabonk dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
     "prix": 29.99,
     "avis": "Extrêmeent bon",
@@ -94,6 +94,65 @@
     "genre": "Action-Aventure",
     "developpeur": "Dani le Fou",
     "editeur": "Dani"
+  },
+  {
+    "id": 9,
+    "game": "Dead Poulpe",
+    "image": "../../backend/data/images/deadpool.png",
+    "description": "Suis dead poulpe dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
+    "prix": 29.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2004-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Fou",
+    "editeur": "Dani"
+  },
+  {
+    "id": 10,
+    "game": "Afif 24",
+    "image": "../../backend/data/images/bappe.png",
+    "description": "Dans un monde où le football est devenu une guerre sans merci, Afif 24 se dresse comme le héros ultime. Enfile tes crampons et prépare-toi à affronter les défis les plus fous sur le terrain. Avec des compétences de dribble incroyables, des tirs puissants et une détermination inébranlable, Afif 24 te propulse dans une aventure footballistique épique. Affronte des adversaires redoutables, débloque de nouveaux stades et deviens la légende du football que tu as toujours rêvé d'être.",
+    "prix": 29.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2023-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Fou",
+    "editeur": "Dani"
+  },
+  {
+    "id": 11,
+    "game": "Togheter say BLYAT '",
+    "image": "../../backend/data/images/togheter.png",
+    "description": "Reste enchainer avec tes amis dans ce jeu de coopération hilarant. Affronte des défis absurdes, résous des énigmes farfelues et crie 'BLYAT' à chaque victoire pour renforcer votre camaraderie virtuelle.",
+    "prix": 29.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2023-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Fou",
+    "editeur": "Dani"
+  },
+  {
+    "id": 12,
+    "game": "Le jeux des russes",
+    "image": "../../backend/data/images/contre.png",
+    "description": "Voici un jeu de stratégie intense où tu incarnes un général russe en pleine guerre. Planifie tes attaques, défends ton territoire et mène tes troupes à la victoire dans ce jeu de guerre épique.",
+    "prix": 29.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2026-5-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Russe",
+    "editeur": "Poutine Games"
+  },
+  {
+    "id": 13,
+    "game": "Sous l'océan de la folie",
+    "image": "../../backend/data/images/sous.png",
+    "description": "Plonge dans les profondeurs de l'océan de la folie dans ce jeu d'aventure psychédélique. Explore des paysages marins étranges, affronte des créatures cauchemardesques et découvre les secrets enfouis dans les abysses de la folie.",
+    "prix": 29.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2023-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani Sous l'océan",
+    "editeur": "Dani"
   }
-
 ]

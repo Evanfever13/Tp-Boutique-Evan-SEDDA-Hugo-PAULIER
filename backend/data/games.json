@@ -2,8 +2,8 @@
   {
     "id": 1,
     "game": "Blanc et Noir : Sortie 67",
-    "image": "./images/67.png",
-    "description": "Arrête la malédiction qui frappe la ville de Luminus dans ce jeu d'aventure captivant. Explore des environnements mystérieux, résous des énigmes complexes et affronte des créatures redoutables pour sauver la ville de l'obscurité imminente.",
+    "image": "data/images/67.png",
+    "description": "Arrête la malédiction qui frappe la ville de Sortie 67 dans ce jeu d'aventure captivant. Explore des environnements mystérieux, résous des énigmes complexes et affronte des créatures redoutables pour sauver la ville de l'obscurité imminente.",
     "prix": 67.67,
     "avis": "Extrêmeent bon",
     "date_de_sortie": "2025-03-03",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "game": "Anneau d'elden",
-    "image": "./images/anneau-elden.png",
+    "image": "data/images/anneau-elden.png",
     "description": "Explore le monde de Elden Ring dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
     "prix": 59.99,
     "avis": "Extrêmeent bon",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "game": "Chevalier vidé par sa femme",
-    "image": "./images/chevalier.png",
+    "image": "data/images/chevalier.png",
     "description": "flemme je ne connais pas le jeux, achete et joue .",
     "prix": 39.99,
     "avis": "Extrêmeent bon",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "game": "Montagne dépressif",
-    "image": "./images/montagne.png",
+    "image": "data/images/montagne.png",
     "description": "En gros, tu montes une montagne avec ton double dépressif (wtf d'ou il sort) .",
     "prix": 9.99,
     "avis": "Extrêmeent bon",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "game": "Merveilleux Spoudeur-Men deux",
-    "image": "./images/spooder-man.png",
+    "image": "data/images/spooder-man.png",
     "description": "Je suis entrain de jouer le jeux, c'est du poulet masterclass, achète, il fait honneur au Spoudeur-Man un.",
     "prix": 89.99,
     "avis": "Extrêmeent bon",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "game": "Montagne Joyeuse",
-    "image": "./images/montagne_joyeuse.png",
+    "image": "data/images/montagne_joyeuse.png",
     "description": "ne tombe pas, sinon tu meurs.",
     "prix": 9.99,
     "avis": "Extrêmeent bon",
@@ -70,5 +70,30 @@
     "genre": "Action-Aventure",
     "developpeur": "Extremely OK Games",
     "editeur": "Extremely OK Games"
+  },
+  {
+    "id": 7,
+    "game": "Al'huide",
+    "image": "data/images/alhuile.png",
+    "description": "masterchef du poulet, tu vas devoir cuisiner un poulet pour le faire devenir un al'huide, c'est un jeu de cuisine, mais avec du poulet.",
+    "prix": 19.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2023-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Bungie",
+    "editeur": "Microsoft Studios"
+  },
+  {
+    "id": 8,
+    "game": "Ultrabonk",
+    "image": "data/images/ultrabonk.png",
+    "description": "Explore le monde de Ultrabonk dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
+    "prix": 29.99,
+    "avis": "Extrêmeent bon",
+    "date_de_sortie": "2023-10-20",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Fou",
+    "editeur": "Dani"
   }
+
 ]

@@ -5,6 +5,7 @@ const router = require('./router/router');
 const port = 8080;
 
 app.use(express.json());
+app.use('/data', express.static('data'));
 app.use('/', router);
 
 app.listen(port, () => {

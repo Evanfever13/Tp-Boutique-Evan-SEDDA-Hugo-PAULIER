@@ -2,20 +2,23 @@
 
 // je vais faire une fonction pour lire et écrire dans un fichier json, gain de temps tkt
 const fs = require('fs');
+const path = require('path');
+
+const dataPath = path.join(__dirname, '../data/users.json');
 
 // fonction pour lire les données des utilisateurs
 function readUsers() {
     try {
-        const data = fs.readFileSync('../data/users.json');
-        return JSON.parse(data);
-    } catch (err) {        
+        const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+        return data.users || data;
+    } catch (err) {
         return [];
-    } 
+    }
 }
 
 // fonction pour écrire les données des utilisateurs
 function writeUsers(users) {
-    fs.writeFileSync('../data/users.json', JSON.stringify(users));
+    fs.writeFileSync(dataPath, JSON.stringify({ users }, null, 2));
 }
 
 // fonction pour inscrire un utilisateur, avec la vérification si l'utilisateur existe déjà ou pas, et si l'inscription est réussie ou pas
@@ -52,16 +55,24 @@ function searchUser(username) {
     const users = readUsers();
     const user = users.find(user => user.username === username);
     if (user) {
-        return { 
-            success: true, 
-            message: 'Utilisateur trouvé' };
+        return {
+            success: true,
+            message: 'Utilisateur trouvé',
+            user: {
+                username: user.username,
+                friends: user.friends || [],
+                games: user.games || []
+            }
+        };
     }
-    return { 
-        success: false, 
-        message: 'Utilisateur non trouvé' };
+    return {
+        success: false,
+        message: 'Utilisateur non trouvé'
+    };
 }
 
-// fonction pour ajouter un ami, avec la vérification si l'utilisateur et l'ami existent ou pas, et si l'ajout est réussi ou pas, afin de faire une liste d'amis pour chaque utilisateur (evan je vais te faire chômer encore plus x2)
+// fonction pour ajouter un ami, avec la vérification si l'utilisateur et l'ami,
+// et si l'ajout est réussi ou pas, le tout dans le json dans la liste des amis
 function addFriend(username, friendUsername) {
     const users = readUsers();
     const user = users.find(user => user.username === username);
@@ -82,12 +93,13 @@ function addFriend(username, friendUsername) {
                 message: 'Cet utilisateur est déjà votre ami' };
         }
     }
-    return { 
-        success: false, 
-        message: 'Utilisateur ou ami non trouvé' };
+    return {
+        success: false,
+        message: 'Utilisateur ou ami non trouvé'
+    };
 }
 
-// s'il y a une fonction add, il y'a une fonction remove chef (comme son nom l'indique, elle va supprimer un ami de la liste d'amis d'un utilisateur, avec la vérification)
+// s'il y a une fonction add, il y'a une fonction remove chef (comme son nom l'indique, elle va supprimer un ami de la liste d'amis d'un utilisateur, avec la vérification dans le json)
 function removeFriend(username, friendUsername) {
     const users = readUsers();
     const user = users.find(user => user.username === username);
@@ -109,11 +121,6 @@ function removeFriend(username, friendUsername) {
         success: false, 
         message: 'Utilisateur ou ami non trouvé' };
 }
-
-
-
-
-
 
 
 

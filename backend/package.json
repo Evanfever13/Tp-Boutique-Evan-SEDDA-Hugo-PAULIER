@@ -1,7 +1,20 @@
 {
+  "name": "backend2vapeur",
+  "version": "1.0.0",
+  "description": "backend express pour le projet Vapeur, un site de vente de jeux vidéo en ligne, concurrent de direct Steam",
+  "license": "ISC",
+  "author": "Hugo PAULIER sur le backend et Evan SEDDA sur le frontend",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon main.js",
+    "start": "node main.js"
+  },
   "dependencies": {
     "cors": "^2.8.6",
-    "express": "^5.2.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.14"
   }
 }

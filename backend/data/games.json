@@ -1,0 +1,77 @@
+{
+    "games" : {
+        "1" : {
+            "id": 1,
+            "nom": "Blanc et Noir : Sortie 67",
+            "image": "images/blanc_et_noir.png",
+            "description": "Arrête la malédiction qui frappe la ville de Sortie 67 dans ce jeu d'aventure captivant. Explore des environnements mystérieux, résous des énigmes complexes et affronte des créatures redoutables pour sauver la ville de l'obscurité imminente.",
+            "prix": 67.67,
+            "avis" : "Extrêmeent bon",
+            "date_de_sortie": "2025-03-03",
+            "genre": "Action-Aventure",
+            "developpeur": "Sandbox Games",
+            "éditeur": "Sandbox Games"
+        },
+        "2" : {
+            "id": 2,
+            "nom": "Anneau d'elden",
+            "image": "images/anneau-elden.png",
+            "description": "Explore le monde de Elden Ring dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
+            "prix": 59.99,
+            "avis" : "Extrêmeent bon",
+            "date_de_sortie": "2020-03-03",
+            "genre": "Action-Aventure",
+            "developpeur": "FromSoftware",
+            "éditeur": "Bandai Namco Entertainment"
+        },
+        "3" : {
+            "id": 3,
+            "nom": "Chevalier vidé par sa femme",
+            "image": "images/chevalier.png",
+            "description": "flemme je ne connais pas le jeux, achete et joue .",
+            "prix": 39.99,
+            "avis" : "Extrêmeent bon",
+            "date_de_sortie": "2017-03-03",
+            "genre": "Action-Aventure",
+            "developpeur": "Team Cherry",
+            "éditeur": "Team Cherry"
+        },
+        "4" : {
+            "id": 4,
+            "nom": "Montagne dépressif",
+            "image": "images/montagne.png",
+            "description": "En gros, tu montes une montagne avec ton double dépressif (wtf d'ou il sort) .",
+            "prix": 9.99,
+            "avis" : "Extrêmeent bon",
+            "date_de_sortie": "2018-01-25",
+            "genre": "Action-Aventure",
+            "developpeur": "Extremely OK Games",
+            "éditeur": "Extremely OK Games"
+        },
+        "5" : {
+            "id": 5,
+            "nom": "Merveilleux Spoudeur-Men deux",
+            "image": "images/spooder-man.png",
+            "description": "Je suis entrain de jouer le jeux, c'est du poulet masterclass, achète, il fait honneur au Spoudeur-Man un.",
+            "prix": 89.99,
+            "avis" : "Extrêmeent bon",
+            "date_de_sortie": "2023-10-20",
+            "genre": "Action-Aventure",
+            "developpeur": "Extremely OK Games",
+            "éditeur": "Extremely OK Games"
+        },
+        "6" : {
+            "id": 6,
+            "nom": "Montagne Joyeuse",
+            "image": "images/montagne_joyeuse.png",
+            "description": "ne tombe pas, sinon tu meurs.",
+            "prix": 9.99,
+            "avis" : "Extrêmeent bon",
+            "date_de_sortie": "2023-10-20",
+            "genre": "Action-Aventure",
+            "developpeur": "Extremely OK Games",
+            "éditeur": "Extremely OK Games"
+        }
+        
+    }
+}

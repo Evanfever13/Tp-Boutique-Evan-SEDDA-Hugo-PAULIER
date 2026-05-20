@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/index.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <title>Connexion - Vapeur</title>
+</head>
+<body>
+    <header>
+        <a href="./shop.html" class="brand-link" aria-label="Aller au magasin">
+            <img src="../assets/img/logo.png" alt="logo">
+        </a>
+        <a href="./shop.html"><p>Magasin</p></a>
+        <a href="./library.html"><p>Bibliotheque</p></a>
+        <a href="./profil.html"><p>Profil</p></a>
+        <a href="./favoris.html"><p>Favoris</p></a>
+        <a href="./about.html"><p>A Propos</p></a>
+        <a href="./pannier.html" class="cart-btn" aria-label="Voir le panier">
+            <img src="../assets/img/Panier.png" alt="Panier">
+        </a>
+    </header>
+
+    <main class="page-shell">
+        <div class="page-header">
+            <div>
+                <span class="eyebrow">Connexion</span>
+                <h1>Connectez-vous à votre compte</h1>
+                <p class="page-copy">Utilisez votre email et votre mot de passe pour accéder à votre profil.</p>
+            </div>
+        </div>
+
+        <section class="auth-card">
+            <form id="loginForm" class="auth-form">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="votre@email.com">
+
+                <label for="password">Mot de passe</label>
+                <input id="password" name="password" type="password" required placeholder="Votre mot de passe">
+
+                <button type="submit" class="button button-primary">Se connecter</button>
+                <p id="loginMessage" class="auth-message"></p>
+                <p class="auth-help">Pas encore de compte ? Utilisez un email existant dans le fichier back-end ou demandez une inscription.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="page-shell">
+            <p>© 2026 Vapeur Boutique. Tous droits réservés.</p>
+            <p>Parcourez, ajoutez à vos favoris et découvrez vos prochains jeux préférés.</p>
+        </div>
+    </footer>
+
+    <script src="../script/login.js"></script>
+</body>
+</html>

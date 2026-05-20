@@ -3,156 +3,515 @@
     "id": 1,
     "game": "Blanc et Noir : Sortie 67",
     "image": "../../backend/data/images/67.png",
+    "image1": "../../backend/data/images/67_1.png",
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "image_premium": "../../backend/data/images/perdu.jpg",
     "description": "Arrête la malédiction qui frappe la ville de Sortie 67 dans ce jeu d'aventure captivant. Explore des environnements mystérieux, résous des énigmes complexes et affronte des créatures redoutables pour sauver la ville de l'obscurité imminente.",
     "prix": 67.67,
+    "prix_deluxe": 77.67,
+    "prix_premium": 87.67,
     "avis": "Extrêmeent bon",
     "date_de_sortie": "2025-03-03",
-    "genre": "Action-Aventure",
+    "genre": "RPG",
     "developpeur": "Sandbox Games",
-    "editeur": "Sandbox Games"
+    "editeur": "Sandbox Games",
+    "stock": 9,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox",
+      "Manette PS4"
+    ]
   },
   {
     "id": 2,
     "game": "Anneau d'elden",
     "image": "../../backend/data/images/anneau-elden.png",
+    "image1": "../../backend/data/images/anneau-elden1.png",
     "description": "Explore le monde de Elden Ring dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
-    "prix": 59.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2020-03-03",
-    "genre": "Action-Aventure",
+    "prix": 34.56,
+    "prix_premium": 44.56,
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Bon",
+    "date_de_sortie": "2018-07-22",
+    "genre": "RPG",
     "developpeur": "FromSoftware",
-    "editeur": "Bandai Namco Entertainment"
+    "editeur": "Bandai Namco Entertainment",
+    "stock": 4,
+    "editions": [
+      "Standard",
+      "Premium"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox"
+    ]
   },
   {
     "id": 3,
     "game": "Chevalier vidé par sa femme",
     "image": "../../backend/data/images/chevalier.png",
+    "image1": "../../backend/data/images/chevalier1.png",
     "description": "flemme je ne connais pas le jeux, achete et joue .",
-    "prix": 39.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2017-03-03",
+    "prix": 78.9,
+    "avis": "Excellent",
+    "date_de_sortie": "2015-11-10",
     "genre": "Action-Aventure",
     "developpeur": "Team Cherry",
-    "editeur": "Team Cherry"
+    "editeur": "Team Cherry",
+    "stock": 2,
+    "editions": [
+      "Standard"
+    ],
+    "support": [
+      "Manette Xbox",
+      "Manette PS4"
+    ]
   },
   {
     "id": 4,
     "game": "Montagne dépressif",
     "image": "../../backend/data/images/montagne.png",
+    "image1": "../../backend/data/images/montagne1.png",
     "description": "En gros, tu montes une montagne avec ton double dépressif (wtf d'ou il sort) .",
-    "prix": 9.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2018-01-25",
+    "prix": 12.34,
+    "prix_deluxe": 19.99,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "avis": "Moyen",
+    "date_de_sortie": "2016-02-28",
     "genre": "Action-Aventure",
     "developpeur": "Extremely OK Games",
-    "editeur": "Extremely OK Games"
+    "editeur": "Extremely OK Games",
+    "stock": 0,
+    "editions": [
+      "Standard",
+      "Deluxe"
+    ],
+    "support": [
+      "Clavier/Souris"
+    ]
   },
   {
     "id": 5,
     "game": "Merveilleux Spoudeur-Men deux",
     "image": "../../backend/data/images/spooder-man.png",
+    "image1": "../../backend/data/images/spooder-man1.png",
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "image_premium": "../../backend/data/images/perdu.jpg",
     "description": "Je suis entrain de jouer le jeux, c'est du poulet masterclass, achète, il fait honneur au Spoudeur-Man un.",
-    "prix": 89.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2023-10-20",
+    "prix": 67.89,
+    "prix_deluxe": 77.89,
+    "prix_premium": 87.89,
+    "avis": "Très bon",
+    "date_de_sortie": "2021-09-05",
     "genre": "Action-Aventure",
     "developpeur": "Extremely OK Games",
-    "editeur": "Extremely OK Games"
+    "editeur": "Extremely OK Games",
+    "stock": 13,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Manette PS4"
+    ]
   },
   {
     "id": 6,
     "game": "Montagne Joyeuse",
     "image": "../../backend/data/images/montagne_joyeuse.png",
+    "image1": "../../backend/data/images/montagne_joyeuse1.png",
     "description": "ne tombe pas, sinon tu meurs.",
-    "prix": 9.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2023-10-20",
+    "prix": 23.45,
+    "avis": "Bon",
+    "date_de_sortie": "2022-04-18",
     "genre": "Action-Aventure",
     "developpeur": "Extremely OK Games",
-    "editeur": "Extremely OK Games"
+    "editeur": "Extremely OK Games",
+    "stock": 25,
+    "editions": [
+      "Standard"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox",
+      "Manette PS4"
+    ]
   },
   {
     "id": 7,
     "game": "Al'huide",
     "image": "../../backend/data/images/alhuile.png",
+    "image1": "../../backend/data/images/alhuile1.png",
     "description": "masterchef du poulet, tu vas devoir cuisiner un poulet pour le faire devenir un al'huide, c'est un jeu de cuisine, mais avec du poulet.",
-    "prix": 19.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2023-10-20",
-    "genre": "Action-Aventure",
+    "prix": 56.78,
+    "prix_deluxe": 66.78,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "avis": "Excellent",
+    "date_de_sortie": "2019-12-01",
+    "genre": "FPS",
     "developpeur": "Bungie",
-    "editeur": "Microsoft Studios"
+    "editeur": "Microsoft Studios",
+    "stock": 100,
+    "editions": [
+      "Standard",
+      "Deluxe"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox"
+    ]
   },
   {
     "id": 8,
     "game": "Ultrabonk",
     "image": "../../backend/data/images/ultrabonk.png",
+    "image1": "../../backend/data/images/ultrabonk1.png",
     "description": "Explore le monde de Ultrabonk dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
-    "prix": 29.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2023-10-20",
+    "prix": 89.01,
+    "prix_premium": 99.01,
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Très bon",
+    "date_de_sortie": "2020-08-14",
     "genre": "Action-Aventure",
     "developpeur": "Dani le Fou",
-    "editeur": "Dani"
+    "editeur": "Dani",
+    "stock": 10,
+    "editions": [
+      "Standard",
+      "Premium"
+    ],
+    "support": [
+      "Clavier/Souris"
+    ]
   },
   {
     "id": 9,
     "game": "Dead Poulpe",
     "image": "../../backend/data/images/deadpool.png",
+    "image1": "../../backend/data/images/deadpool1.png",
     "description": "Suis dead poulpe dans ce jeu d'aventure épique. Affronte des ennemis redoutables, découvre des secrets oubliés et deviens un légende dans ce royaume fantastique.",
-    "prix": 29.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2004-10-20",
+    "prix": 45.67,
+    "avis": "Mauvais",
+    "date_de_sortie": "2005-03-20",
     "genre": "Action-Aventure",
     "developpeur": "Dani le Fou",
-    "editeur": "Dani"
+    "editeur": "Dani",
+    "stock": 3,
+    "editions": [
+      "Standard"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox",
+      "Manette PS4"
+    ]
   },
   {
     "id": 10,
     "game": "Afif 24",
     "image": "../../backend/data/images/bappe.png",
+    "image1": "../../backend/data/images/bappe1.png",
     "description": "Dans un monde où le football est devenu une guerre sans merci, Afif 24 se dresse comme le héros ultime. Enfile tes crampons et prépare-toi à affronter les défis les plus fous sur le terrain. Avec des compétences de dribble incroyables, des tirs puissants et une détermination inébranlable, Afif 24 te propulse dans une aventure footballistique épique. Affronte des adversaires redoutables, débloque de nouveaux stades et deviens la légende du football que tu as toujours rêvé d'être.",
-    "prix": 29.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2023-10-20",
+    "prix": 67.89,
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Bon",
+    "date_de_sortie": "2022-06-30",
     "genre": "Action-Aventure",
     "developpeur": "Dani le Fou",
-    "editeur": "Dani"
+    "editeur": "Dani",
+    "stock": 49,
+    "editions": [
+      "Standard",
+      "Premium"
+    ],
+    "support": [
+      "Manette Xbox",
+      "Manette PS4"
+    ]
   },
   {
     "id": 11,
     "game": "Togheter say BLYAT '",
     "image": "../../backend/data/images/togheter.png",
+    "image1": "../../backend/data/images/togheter1.png",
     "description": "Reste enchainer avec tes amis dans ce jeu de coopération hilarant. Affronte des défis absurdes, résous des énigmes farfelues et crie 'BLYAT' à chaque victoire pour renforcer votre camaraderie virtuelle.",
-    "prix": 29.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2023-10-20",
-    "genre": "Action-Aventure",
+    "prix": 34.56,
+    "prix_deluxe": 44.56,
+    "prix_premium": 54.56,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Excellent",
+    "date_de_sortie": "2021-11-11",
+    "genre": "MMO",
     "developpeur": "Dani le Fou",
-    "editeur": "Dani"
+    "editeur": "Dani",
+    "stock": 12,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Clavier/Souris"
+    ]
   },
   {
     "id": 12,
     "game": "Le jeux des russes",
     "image": "../../backend/data/images/contre.png",
+    "image1": "../../backend/data/images/contre1.png",
     "description": "Voici un jeu de stratégie intense où tu incarnes un général russe en pleine guerre. Planifie tes attaques, défends ton territoire et mène tes troupes à la victoire dans ce jeu de guerre épique.",
-    "prix": 29.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2026-5-20",
+    "prix": 78.9,
+    "prix_deluxe": 88.9,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "avis": "Très bon",
+    "date_de_sortie": "2024-01-15",
     "genre": "Action-Aventure",
     "developpeur": "Dani le Russe",
-    "editeur": "Poutine Games"
+    "editeur": "Poutine Games",
+    "stock": 6,
+    "editions": [
+      "Standard",
+      "Deluxe"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox"
+    ]
   },
   {
     "id": 13,
     "game": "Sous l'océan de la folie",
     "image": "../../backend/data/images/sous.png",
+    "image1": "../../backend/data/images/sous1.png",
     "description": "Plonge dans les profondeurs de l'océan de la folie dans ce jeu d'aventure psychédélique. Explore des paysages marins étranges, affronte des créatures cauchemardesques et découvre les secrets enfouis dans les abysses de la folie.",
-    "prix": 29.99,
-    "avis": "Extrêmeent bon",
-    "date_de_sortie": "2023-10-20",
+    "prix": 12.34,
+    "avis": "Moyen",
+    "date_de_sortie": "2017-08-25",
     "genre": "Action-Aventure",
     "developpeur": "Dani Sous l'océan",
-    "editeur": "Dani"
+    "editeur": "Dani",
+    "stock": 19,
+    "editions": [
+      "Standard"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox",
+      "Manette PS4"
+    ]
+  },
+  {
+    "id": 14,
+    "game": "Brique : Chauve-souris Homme",
+    "image": "../../backend/data/images/batbrique.png",
+    "image1": "../../backend/data/images/batbrique1.png",
+    "description": "Incarné la Chauve-souris Homme dans ce jeu d'action palpitant. Affronte des criminels, résous des énigmes et protège la ville de Gotham dans ce jeu de super-héros épique.",
+    "prix": 56.78,
+    "prix_premium": 66.78,
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Bon",
+    "date_de_sortie": "2018-05-09",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani en Brrique",
+    "editeur": "Dani",
+    "stock": 4,
+    "editions": [
+      "Standard",
+      "Premium"
+    ],
+    "support": [
+      "Manette Xbox",
+      "Manette PS4"
+    ]
+  },
+  {
+    "id": 15,
+    "game": "EL DIAVLO",
+    "image": "../../backend/data/images/diablo.png",
+    "image1": "../../backend/data/images/diablo1.png",
+    "description": "Bienvenue en ENFER ! Incarne un héros légendaire et affronte les forces du mal dans ce jeu d'action-RPG épique. Explore des donjons sombres, collecte des trésors et défie les seigneurs démoniaques pour sauver le monde de la destruction imminente.",
+    "prix": 89.01,
+    "prix_deluxe": 99.01,
+    "prix_premium": 109.01,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Excellent",
+    "date_de_sortie": "2019-10-31",
+    "genre": "RPG",
+    "developpeur": "Dani en Enfer",
+    "editeur": "Dani",
+    "stock": 0,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox",
+      "Manette PS4"
+    ]
+  },
+  {
+    "id": 16,
+    "game": "REPOsitory",
+    "image": "../../backend/data/images/repo.png",
+    "image1": "../../backend/data/images/repo1.png",
+    "description": "Plonge dans le monde de la gestion de données avec REPOsitory, un jeu de simulation captivant. Construis et gère ton propre dépôt de données, organise tes fichiers, optimise tes ressources et affronte des défis de stockage pour devenir le maître incontesté de la gestion de données.",
+    "prix": 45.67,
+    "prix_deluxe": 55.67,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "avis": "Très bon",
+    "date_de_sortie": "2020-12-12",
+    "genre": "MMO",
+    "developpeur": "Dani le Burger",
+    "editeur": "Dani",
+    "stock": 35,
+    "editions": [
+      "Standard",
+      "Deluxe"
+    ],
+    "support": [
+      "Clavier/Souris"
+    ]
+  },
+  {
+    "id": 17,
+    "game": "Over Cook",
+    "image": "../../backend/data/images/overcooked.jpg",
+    "image1": "../../backend/data/images/overcooked1.jpg",
+    "description": "Plonge dans le monde de la cuisine avec Over Cook, un jeu de simulation hilarant. Prépare des plats délicieux, satisfaits tes clients et deviens le chef étoilé du restaurant.",
+    "prix": 67.89,
+    "prix_deluxe": 77.89,
+    "prix_premium": 87.89,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Bon",
+    "date_de_sortie": "2021-07-04",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Trop Cuit",
+    "editeur": "Dani",
+    "stock": 19,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Manette Xbox",
+      "Manette PS4"
+    ]
+  },
+  {
+    "id": 18,
+    "game": "Over Cook 2",
+    "image": "../../backend/data/images/over2.png",
+    "image1": "../../backend/data/images/over2_1.png",
+    "description": "Retour dans le monde de la cuisine avec Over Cook 2, un jeu de simulation hilarant. Prépare des plats délicieux, satisfaits tes clients et deviens le chef étoilé du restaurant.",
+    "prix": 23.45,
+    "prix_premium": 33.45,
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Excellent",
+    "date_de_sortie": "2022-03-17",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Trop Cuit",
+    "editeur": "Dani",
+    "stock": 16,
+    "editions": [
+      "Standard",
+      "Premium"
+    ],
+    "support": [
+      "Manette Xbox",
+      "Manette PS4"
+    ]
+  },
+  {
+    "id": 19,
+    "game": "Grand Très Haut : Sans Andrea",
+    "image": "../../backend/data/images/gtas.jpg",
+    "image1": "../../backend/data/images/gtas1.jpg",
+    "description": "Retour dans le monde de la cuisine avec Over Cook 3, un jeu de simulation hilarant. Prépare des plats délicieux, satisfaits tes clients et deviens le chef étoilé du restaurant.",
+    "prix": 78.9,
+    "prix_deluxe": 88.9,
+    "prix_premium": 98.9,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Très bon",
+    "date_de_sortie": "2023-06-22",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Trop Cuit",
+    "editeur": "Dani",
+    "stock": 41,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox",
+      "Manette PS4"
+    ]
+  },
+  {
+    "id": 20,
+    "game": "FAB 26",
+    "image": "../../backend/data/images/fab.png",
+    "image1": "../../backend/data/images/fab1.png",
+    "description": "Plonge dans le monde du football avec FAB, un clown reconvertit en super Footballeur tah neille-mar",
+    "prix": 12.34,
+    "prix_deluxe": 22.34,
+    "prix_premium": 32.34,
+    "avis": "Moyen",
+    "date_de_sortie": "2024-05-10",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Footballeur",
+    "editeur": "Dani",
+    "stock": 30,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Manette Xbox",
+      "Manette PS4"
+    ]
+  },
+  {
+    "id": 21,
+    "game": "SUPER FABRICE EBOUE",
+    "image": "../../backend/data/images/superfabrice.png",
+    "image1": "../../backend/data/images/superfabrice1.png",
+    "description": "Incarne Super Fabrice Eboué dans ce jeu d'action hilarant. Affronte des ennemis redoutables, résous des énigmes farfelues et sauve le monde avec ton humour unique.",
+    "prix": 56.78,
+    "prix_deluxe": 66.78,
+    "prix_premium": 76.78,
+    "image_deluxe": "../../backend/data/images/perdu.jpg",
+    "image_premium": "../../backend/data/images/perdu.jpg",
+    "avis": "Excellent",
+    "date_de_sortie": "2025-02-14",
+    "genre": "Action-Aventure",
+    "developpeur": "Dani le Comique",
+    "editeur": "Dani",
+    "stock": 13,
+    "editions": [
+      "Standard",
+      "Deluxe",
+      "Premium"
+    ],
+    "support": [
+      "Clavier/Souris",
+      "Manette Xbox",
+      "Manette PS4"
+    ]
   }
 ]

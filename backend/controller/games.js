@@ -1,14 +1,9 @@
-// dans ce ficher games pour faire les fonctions qui vont être utilisées dans les routes pour les jeux (ajout, suppression, etc)
-
-// je vais faire une fonction pour lire et écrire dans un fichier json, encore du gain de temps x3
 const fs = require('fs');
-// comme je l'ai dis dans users.js, pour palier au probième de chemin, on va utiliser le module path
 const path = require('path');
+const { addGameToUser } = require('./users');
 
-// nouveau problème d'import, donc je déclare une variable dataPath directement
 const dataPath = path.join(__dirname, '../data/games.json');
 
-// fonction pour lire les données des jeux
 function readGames() {
     try {
         const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
@@ -22,58 +17,10 @@ function readGames() {
     }
 }
 
-// fonction pour écrire les données des jeux
 function writeGames(games) {
     fs.writeFileSync(dataPath, JSON.stringify(games, null, 2));
 }
 
-// fonction pour ajouter un jeu à sa bibliothèque (jeux possédés), avec la vérification
-function addGame(username, game) {
-    const games = readGames();
-    if (games.find(g => g.username === username && g.game === game)) {
-        return { 
-            success: false, 
-            message: 'Jeu déjà ajouté' };
-    }
-    games.push({ username, game });
-    writeGames(games);
-    return { 
-        success: true, 
-        message: 'Jeu ajouté avec succès' };
-}
-
-// fonction pour supprimer un jeu de sa bibliothèque, avec la vérification
-function removeGame(username, game) {
-    const games = readGames();
-    const index = games.findIndex(g => g.username === username && g.game === game);
-    if (index !== -1) {
-        games.splice(index, 1);
-        writeGames(games);
-        return { 
-            success: true, 
-            message: 'Jeu supprimé avec succès' };
-    }
-    return {
-        success: false,
-        message: 'Jeu non trouvé' };
-}
-
-// fonction pour chercher les jeux d'un utilisateur, avec la vérification
-function getUserGames(username) {
-    const games = readGames();
-    const userGames = games.filter(g => g.username === username).map(g => g.game);
-    if (userGames.length > 0) {
-        return { 
-            success: true,
-            message: 'Jeux trouvés',
-            games: userGames };
-    }
-    return { 
-        success: false,
-        message: 'Aucun jeu trouvé' };
-}
-
-// fonction pour chercher tous les jeux disponibles, avec la vérif
 function getAllGames() {
     const games = readGames();
     if (games.length > 0) {
@@ -87,7 +34,6 @@ function getAllGames() {
         message: 'Aucun jeu trouvé' };
 }
 
-// fonction pour ajouter un jeu dans le magasin, avec vérif
 function addGameToStore(game) {
     const games = readGames();
     if (games.find(g => g.game === game)) {
@@ -102,7 +48,6 @@ function addGameToStore(game) {
         message: 'Jeu ajouté au magasin avec succès' };
 }
 
-// fonction pour supprimer un jeu du magasin, avec la vérification
 function removeGameFromStore(game) {
     const games = readGames();
     const index = games.findIndex(g => g.game === game);
@@ -118,7 +63,6 @@ function removeGameFromStore(game) {
         message: 'Jeu non trouvé dans le magasin' };
 }
 
-// fonction pour chercher tous les jeux disponibles dans le magasin avec leur prix et image, avec la vérification
 function getStoreGames() {
     const games = readGames();
 
@@ -143,9 +87,6 @@ function getStoreGames() {
     };
 }
 
-
-
-// fonction pour ajouter une promotion à un jeu, avec la vérification
 function addPromotion(game, promotion) {
     const games = readGames();
     const index = games.findIndex(g => g.game === game);
@@ -161,7 +102,6 @@ function addPromotion(game, promotion) {
         message: 'Jeu non trouvé pour ajouter la promotion' };
 }
 
-// si addPromotion, existe, removePromotion, pour supprimer la promotion d'un jeu, avec la vérification
 function removePromotion(game) {
     const games = readGames();
     const index = games.findIndex(g => g.game === game);
@@ -177,7 +117,6 @@ function removePromotion(game) {
         message: 'Jeu non trouvé pour supprimer la promotion' };
 }
 
-// fonction pour trier selon le genre + verif
 function getGamesByGenre(genre) {
     const games = readGames();
     const genreGames = games.filter(g => g.genre === genre).map(g => g.game);
@@ -192,7 +131,6 @@ function getGamesByGenre(genre) {
         message: 'Aucun jeu trouvé pour ce genre' };
 }
 
-// fonction pour gérer la pagination 10 par 10 par page pour le evan , avec bien sur la vérification
 function getGamebyPage(page){
     const games = readGames();
     const pageSize = 10;
@@ -211,7 +149,6 @@ function getGamebyPage(page){
     };
 }
 
-// fonction qui cherche un jeux selon son id, avec la vérification
 function getGameById(id) {
     const games = readGames();
     const game = games.find(g => g.id === parseInt(id));
@@ -227,22 +164,6 @@ function getGameById(id) {
     };
 }
 
-// fonction pour chercher un jeu selon son genre, avec la vérification
-function getGamesByGenre(genre) {
-    const games = readGames();
-    const genreGames = games.filter(g => g.genre === genre).map(g => g.game);
-    if (genreGames.length > 0) {
-        return {
-            success: true,
-            message: 'Jeux trouvés pour le genre',
-            games: genreGames };
-    }
-    return {
-        success: false,
-        message: 'Aucun jeu trouvé pour ce genre' };
-}
-
-// fonction pour chercher un jeu selon son prix, avec la vérification
 function getGamesByPrice(price) {
     const games = readGames();
     const priceGames = games.filter(g => g.prix <= price).map(g => g.game);
@@ -257,13 +178,45 @@ function getGamesByPrice(price) {
         message: 'Aucun jeu trouvé pour ce prix' };
 }
 
+function processPurchase(userEmail, gameId, edition) {
+    const games = readGames();
+    const gameIndex = games.findIndex(g => g.id === parseInt(gameId));
 
+    if (gameIndex === -1) {
+        return { success: false, message: 'Jeu non trouvé' };
+    }
 
-// on exporte les fonctions pour les utiliser dans les routes
+    const game = games[gameIndex];
+
+    if (game.stock <= 0) {
+        return { success: false, message: 'Stock épuisé pour ce jeu' };
+    }
+
+    let price = game.prix;
+    const editionLower = edition.toLowerCase();
+    if (editionLower !== 'standard') {
+        const priceKey = `prix_${editionLower}`;
+        if (game[priceKey]) {
+            price = game[priceKey];
+        }
+    }
+
+    const addResult = addGameToUser(userEmail, game.id, price);
+    if (!addResult.success) {
+        return addResult;
+    }
+
+    games[gameIndex].stock -= 1;
+    writeGames(games);
+
+    return {
+        success: true,
+        message: `Jeu acheté avec succès en édition ${edition}. Nouveau solde : ${addResult.newBalance.toFixed(2)}€`,
+        stock: games[gameIndex].stock
+    };
+}
+
 module.exports = {
-    addGame,
-    removeGame,
-    getUserGames,
     getAllGames,
     addGameToStore,
     removeGameFromStore,
@@ -273,5 +226,6 @@ module.exports = {
     getGamesByGenre,
     getGamesByPrice,
     getGamebyPage,
-    getGameById
+    getGameById,
+    processPurchase
 };

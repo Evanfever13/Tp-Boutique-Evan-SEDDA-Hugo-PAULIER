@@ -1,0 +1,469 @@
+/* page d'acceuil qui est shop */
+.page-shell,
+.shop,
+.Pannier {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: min(100%, 1080px);
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+}
+
+.page-footer {
+    background: rgba(11, 14, 19, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.75rem 0;
+    margin-top: 2rem;
+}
+
+.page-footer p {
+    margin: 0;
+    color: rgba(221, 232, 245, 0.72);
+    line-height: 1.6;
+}
+
+.page-footer p + p {
+    margin-top: 0.7rem;
+}
+
+.page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-header .eyebrow,
+.about-hero .eyebrow,
+.page-header .subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #bfee11;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.page-header h1 {
+    margin-top: 0.35rem;
+    font-size: clamp(2.1rem, 4vw, 2.8rem);
+    color: #dde8f5;
+    line-height: 1.05;
+}
+
+.page-header p,
+.page-copy {
+    max-width: 720px;
+    color: rgba(221, 232, 245, 0.8);
+    margin-top: 0.85rem;
+}
+
+.page-message {
+    padding: 20px;
+}
+
+/* la page de la boutique */
+#filters {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.shop-card {
+    background-color: #1a2333;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-card a {
+    text-decoration: none;
+    color: white;
+}
+
+.shop-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.shop-card h3 {
+    margin: 0;
+}
+
+.shop-card .price {
+    color: #bfee11;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.shop-card .genre {
+    font-size: 0.9em;
+}
+
+.shop-card .select-edition {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.shop-card .btn-add-pannier,
+.shop-card .btn-favori {
+    margin-bottom: 10px;
+}
+
+/* Product Page */
+.product-page-grid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-gallery {
+    flex: 1;
+}
+
+.product-gallery #main-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-gallery #gallery-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info #actions-achat {
+    margin-top: 20px;
+}
+
+.product-info #select-edition {
+    margin-right: 10px;
+}
+
+/* page de la bibliothèque */
+.library-container {
+    width: min(100%, 1080px);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.library-empty {
+    text-align: center;
+}
+
+.library-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.library-card {
+    width: 250px;
+    background-color: #1a2333;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.library-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.library-card h3 {
+    margin-top: 0;
+}
+
+.library-card .button {
+    width: 100%;
+}
+
+.login-prompt {
+    text-align: center;
+    padding: 50px;
+}
+
+/* page de favoris */
+.favorites-container {
+    padding: 20px;
+}
+
+.favorites-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fav-card {
+    width: 250px;
+    background-color: #1a2333;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fav-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.fav-card h3 {
+    margin-top: 0;
+}
+
+.fav-card p.price {
+    color: #bfee11;
+    margin-bottom: 15px;
+}
+
+.fav-card .button {
+    margin-top: auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+}
+
+.fav-card .button-secondary {
+    margin-bottom: 10px;
+}
+
+/* page du panier */
+.Pannier {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: min(100%, 900px);
+    margin: 0 auto 36px;
+    padding: 0 20px;
+}
+
+.pannier-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 16px;
+    background: #1a2333;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    transition: background 0.18s, border-color 0.18s;
+}
+
+.pannier-item:hover {
+    background: #1f2a3d;
+    border-color: rgba(191, 238, 17, 0.3);
+}
+
+.cart-item-image {
+    width: 100px;
+    margin-right: 15px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    margin: 0 0 5px 0;
+}
+
+.cart-summary {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+/* et la page de profil */
+.Profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.Profil .page-shell {
+    width: min(100%, 880px);
+}
+
+.profile-card {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.profile-hero {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(191, 238, 17, 0.12);
+}
+
+.profile-meta {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.profile-meta h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #dde8f5;
+}
+
+.profile-meta p {
+    color: rgba(221, 232, 245, 0.65);
+    line-height: 1.7;
+}
+
+.profile-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.profile-about {
+    padding: 1.4rem;
+    background: rgba(17, 24, 34, 0.96);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.profile-about h2 {
+    margin-bottom: 0.85rem;
+    font-size: 1.15rem;
+}
+
+.profile-about p {
+    color: rgba(221, 232, 245, 0.78);
+    line-height: 1.75;
+}
+
+
+/* About Page */
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    width: min(100%, 1080px);
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    color: #dde8f5;
+    line-height: 1.1;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.about-hero p:not(.eyebrow) {
+    color: rgba(221, 232, 245, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.about-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.ad-card {
+    background-color: #1a2333;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.ad-card img {
+    max-width: 220px;
+}
+
+.about-cta {
+    display: inline-flex;
+    padding: 0.95rem 1.5rem;
+    background-color: #bfee11;
+    color: #0b0e13;
+    font-weight: 700;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.about-cta:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: min(100%, 1080px);
+    margin: 2rem auto 4rem;
+    padding: 0 1.5rem;
+}
+
+.about-card {
+    background-color: #1a2333;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(191, 238, 17, 0.3);
+}
+
+.about-card h2 {
+    color: #bfee11;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+}
+
+.about-card p {
+    line-height: 1.7;
+    color: rgba(221, 232, 245, 0.8);
+    margin: 0;
+}

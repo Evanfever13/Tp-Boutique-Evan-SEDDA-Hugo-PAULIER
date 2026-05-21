@@ -1,5 +1,11 @@
+// on essaie de trouver la balise .Pannier. + sécurité en cas d'erreur
 const pannier = document.querySelector('.Pannier');
+if (!pannier) {
+    console.error("La balise .Pannier est introuvable dans pannier.html");
+    pannier = document.body;
+}
 
+// fonction qui charge le panier
 async function loadPannier() {
     if (!pannier) return;
     pannier.innerHTML = '';

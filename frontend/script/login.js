@@ -1,22 +1,27 @@
+// ici on récupere les éléments du DOM nécessaires
 const loginForm = document.getElementById('loginForm');
 const loginMessage = document.getElementById('loginMessage');
 const storedEmail = localStorage.getItem('vapeurUserEmail');
 
+// fonction qui affiche un message
 function setMessage(text, type = 'info') {
     if (!loginMessage) return;
     loginMessage.textContent = text;
     loginMessage.className = `auth-message ${type === 'error' ? 'error' : 'success'}`;
 }
 
+// fonction pour se déconnecter
 function logout() {
     localStorage.removeItem('vapeurUserEmail');
     window.location.reload();
 }
 
+// vérifie si l'utilisateur est déjà connecté et affiche un message approprié
 if (storedEmail) {
     setMessage(`Connecté en tant que ${storedEmail}.`, 'success');
 }
 
+// gestion du formulaire de connexion
 loginForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
 

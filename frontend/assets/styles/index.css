@@ -59,7 +59,7 @@ a {
     background: #bfee11;
 }
 
-/* --- HEADER --- */
+/* le header */
 
 header {
     position: sticky;
@@ -119,7 +119,7 @@ header a:not(.brand-link):not(.cart-btn):hover {
     border-color: transparent;
 }
 
-/* --- COMPONENTS --- */
+/* les composants */
 
 button,
 input,
@@ -386,9 +386,8 @@ form {
     color: rgba(221, 232, 245, 0.85);
 }
 
-/* --- PAGES --- */
 
-/* General Page Layout */
+/* La page principale layout */
 .page-shell,
 .shop,
 .Pannier {
@@ -405,7 +404,7 @@ form {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: 1.75rem 0;
     margin-top: 2rem;
-    margin-top: auto; /* This pushes the footer to the bottom */
+    margin-top: auto;
 }
 
 .page-footer p {
@@ -515,7 +514,20 @@ form {
     margin-bottom: 10px;
 }
 
-/* Product Page */
+/* Taille uniforme pour toutes les images de cartes */
+.card img,
+.shop-card img,
+.fav-card img,
+.library-card img,
+.similaire-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* ici c'est la page Produit */
 .product-page-grid {
     display: flex;
     gap: 20px;
@@ -528,6 +540,14 @@ form {
 
 .product-gallery #main-image {
     width: 100%;
+    border-radius: 8px;
+}
+
+/* Image principale de la page produit (obligé de le préciser car je me suis paumé dans mon propre css */
+#main-image {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -592,7 +612,7 @@ form {
     padding: 50px;
 }
 
-/* Favorites Page */
+/* page des favoris */
 .favorites-container {
     padding: 20px;
 }
@@ -640,7 +660,7 @@ form {
     margin-bottom: 10px;
 }
 
-/* Cart Page */
+/* le panier */
 .Pannier {
     display: flex;
     flex-direction: column;
@@ -686,7 +706,7 @@ form {
     padding-top: 20px;
 }
 
-/* Profile Page */
+/* et la page de profil user du seigneur */
 .Profil {
     display: flex;
     justify-content: center;
@@ -877,4 +897,63 @@ form {
 
 .btn-discover {
     margin-top: 10px;
+}
+ 
+/* Produits similaires sur la page produit */
+.similaires-section {
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+ 
+.similaires-section h2 {
+    margin-bottom: 15px;
+    color: #bfee11;
+}
+ 
+.similaires-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+ 
+.similaire-card {
+    width: 180px;
+    background-color: #1a2333;
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none;
+    color: #dde8f5;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+}
+ 
+.similaire-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(191, 238, 17, 0.3);
+}
+ 
+.similaire-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+ 
+.similaire-card p {
+    margin: 2px 0;
+    font-size: 0.85rem;
+}
+ 
+.similaire-card .price {
+    color: #bfee11;
+    font-weight: bold;
+}
+ 
+/* Bouton "lire plus" dans la description produit */
+#btn-lire-plus {
+    margin-top: 8px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
 }

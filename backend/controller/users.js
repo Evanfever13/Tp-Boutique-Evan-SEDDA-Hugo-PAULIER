@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 const usersFile = path.join(__dirname, '../data/users.json');
@@ -42,7 +43,7 @@ function registerUser(username, email, password) {
         niveau: 1,
         amis: [],
         jeux: [],
-        image: '/data/images/perdu.jpg',
+        image: 'http://localhost:8080/images/perdu.jpg',
     });
     writeUsers(users);
     return {
@@ -70,7 +71,7 @@ function loginUser(identifier, password) {
                 niveau: user.niveau || user.level || 1,
                 amis: user.amis || [],
                 jeux: user.jeux || [],
-                image: user.image || '/data/images/perdu.jpg',
+                image: user.image || 'http://localhost:8080/images/perdu.jpg',
             },
         };
     }
@@ -96,7 +97,7 @@ function getUserProfile(email) {
                 niveau: user.niveau || user.level || 1,
                 amis: user.amis || [],
                 jeux: user.jeux || [],
-                image: user.image || '/data/images/perdu.jpg',
+                image: user.image || 'http://localhost:8080/images/perdu.jpg',
             },
         };
     }

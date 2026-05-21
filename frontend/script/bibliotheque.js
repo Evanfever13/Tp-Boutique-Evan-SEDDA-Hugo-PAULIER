@@ -1,11 +1,8 @@
-// on essaie de trouver la balise <main>. Si elle n'existe pas, on cherche l'ancienne classe .Library par sécurité
-let sectionBibliotheque = document.querySelector('main') || document.querySelector('.Library'); 
-
-// si vraiment aucun des deux n'existe, on en crée un pour éviter que la page reste blanche
+// on essaie de trouver la balise <main>. + sécurité en cas d'erreur
+let sectionBibliotheque = document.querySelector('main')
 if (!sectionBibliotheque) {
-    console.warn("Avertissement: La balise <main> est manquante dans library.html. Création d'un conteneur par défaut.");
-    sectionBibliotheque = document.createElement('main');
-    document.body.appendChild(sectionBibliotheque);
+    console.error("La balise <main> est introuvable dans library.html");
+    sectionBibliotheque = document.body;
 }
 
 // fonction qui charge la bibliothèque

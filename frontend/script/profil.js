@@ -1,6 +1,11 @@
-﻿const profileSection = document.querySelector('.Profil');
+﻿// on récupère la section Profil. + sécurité en cas d'erreur
+const profileSection = document.querySelector('.Profil');
 const profileEmailKey = 'vapeurUserEmail';
+if (!profileSection) {
+    console.error("La balise .Profil est introuvable dans profil.html");
+}
 
+// fonction qui charge le profil
 async function loadProfil() {
     if (!profileSection) return;
 
@@ -27,6 +32,7 @@ async function loadProfil() {
     }
 }
 
+// fonction qui affiche le message de connexion et le bouton de connexion
 function renderLoginPrompt(message = '') {
     if (!profileSection) return;
 
@@ -44,6 +50,7 @@ function renderLoginPrompt(message = '') {
     `;
 }
 
+// fonction qui affiche les informations du profil
 function renderProfile(user) {
     if (!profileSection) return;
 

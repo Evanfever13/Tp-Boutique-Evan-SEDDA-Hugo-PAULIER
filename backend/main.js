@@ -5,11 +5,17 @@ const router = require('./router/router');
 const port = 8080;
 
 app.use(express.json());
-app.use('/data', express.static('data'));
+
+// autorise le frontend (port 3000) à charger les images depuis le backend (port 8080)
+app.use('/images', (req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    next();
+}, express.static('data/images'));
+
 app.use('/', router);
 
 app.listen(port, () => {
-    console.log(`Serveur démarré sur le port ${port}`);
-    console.log(`Lien pour vérifier le backend: http://localhost:${port}/home`);
-    console.log(`on va le supp pour la version finale`);
+    console.log(`Serveur backend démarré sur le port ${port}`);
+    console.log(`API disponible sur : http://localhost:${port}/home`);
+    console.log(`Images disponibles sur : http://localhost:${port}/images/`);
 });

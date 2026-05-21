@@ -17,14 +17,12 @@
       "username": "bastou",
       "niveau": 1,
       "email": "hugo.paulier@ynov.com",
-      "portefeuille": 9841.88,
+      "portefeuille": 9987.66,
       "date_de_naissance": "2002-09-12",
       "mot_de_passe": "qwerty",
       "amis": [],
       "jeux": [
-        21,
-        18,
-        17
+        13
       ]
     }
   ]

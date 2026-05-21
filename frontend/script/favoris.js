@@ -1,7 +1,7 @@
+// on essaie de trouver la balise <main>. + sécurité en cas d'erreur
 let zoneFavoris = document.querySelector('main');
 if (!zoneFavoris) {
     console.error("La balise <main> est introuvable dans favoris.html");
-    // Fallback to body if main is missing, though it shouldn't be.
     zoneFavoris = document.body;
 }
 
@@ -31,6 +31,7 @@ function sauvegarderIdsFavoris() {
     localStorage.setItem('vapeurFavoriteIds', JSON.stringify(favorisIds));
 }
 
+// fonction qui initialise la page des favoris
 async function initialiserFavoris() {
     favorisIds = chargerIdsFavoris();
     zoneFavoris.innerHTML = '<p class="page-message">Chargement des favoris...</p>';

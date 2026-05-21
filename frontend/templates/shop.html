@@ -8,23 +8,40 @@
     <title>Vapeur</title>
 </head>
 <body>
-    <header>
+        <header>
 
-        <img src="../assets/img/logo.png" alt="logo"></img>
-        <h2>Vapeur</h2>
-        <a href="/shop"><p>Magasin</p></a>
-        <a href="/library"><p>Bibliotheque</p></a>
-        <a href="/about"><p>A Propos</p></a>
- 
+                <a href="./shop.html" class="brand-link" aria-label="Aller au magasin">
+                    <img src="../assets/img/logo.png" alt="logo">
+                </a>
+                <a href="./shop.html"><p>Magasin</p></a>
+                <a href="./library.html"><p>Bibliotheque</p></a>
+                <a href="./profil.html"><p>Profil</p></a>
+                <a href="./favoris.html"><p>Favoris</p></a>
+                <a href="./about.html"><p>A Propos</p></a>
 
-    </header>
+                <a href="./pannier.html" class="cart-btn" aria-label="Voir le panier">
+                    <img src="../assets/img/Panier.png" alt="Panier">
+                </a>
 
-        <form action="search">
-            <input type="text" placeholder="Rechercher...">
+        </header>
+
+        <form id="searchForm" class="search-bar" role="search" aria-label="Recherche de jeux">
+            <input id="searchInput" type="search" placeholder="Rechercher un jeu..." aria-label="Rechercher un jeu">
+            <button id="searchButton" type="submit">Rechercher</button>
+            <button id="clearSearch" type="button" aria-label="Effacer la recherche">×</button>
         </form>
 
-    <section>
-        
-    </section>
+    <div id="filters"></div>
+
+    <section class="shop" aria-label="Liste des jeux"></section>
+
+    <footer class="page-footer">
+        <div class="page-shell">
+            <p>© 2026 Vapeur Boutique. Tous droits réservés.</p>
+            <p>Parcourez, ajoutez à vos favoris et découvrez vos prochains jeux préférés.</p>
+        </div>
+    </footer>
+
+    <script src="../script/shop.js"></script>
 </body>
 </html>

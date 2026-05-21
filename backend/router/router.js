@@ -1,14 +1,10 @@
-// ok, ici on va faire du express, c'est un framework pour faire du serveur en nodejs
 const express = require('express');
 const games = require('../controller/games');
 const users = require('../controller/users');
 const router = express.Router();
 
 const cors = require('cors');
-
 router.use(cors());
-
-// et là, on va initialiser les routes
 
 router.get('/home', (req, res) => {
 	res.json(games.getAllGames());
@@ -20,6 +16,22 @@ router.post('/home', (req, res) => {
 
 router.delete('/home', (req, res) => {
 	res.json(games.removeGameFromStore(req.body.game));
+});
+
+router.get('/game/:id', (req, res) => {
+	res.json(games.getGameById(req.params.id));
+});
+
+router.get('/store', (req, res) => {
+	res.json(games.getStoreGames());
+});
+
+router.get('/user/games', (req, res) => {
+	const userEmail = req.query.email;
+	if (!userEmail) {
+		return res.status(400).json({ success: false, message: 'Email utilisateur requis.' });
+	}
+	res.json(users.getUserGames(userEmail));
 });
 
 router.post('/promotions', (req, res) => {
@@ -46,19 +58,30 @@ router.get('/pages', (req, res) => {
 	res.json(games.getGamebyPage(req.query.page));
 });
 
-// partie utilisateurs
+router.post('/buy', (req, res) => {
+	const { userEmail, gameId, edition } = req.body;
+	if (!userEmail || !gameId) {
+		return res.status(400).json({ success: false, message: 'Email utilisateur et ID du jeu requis.' });
+	}
+	res.json(games.processPurchase(userEmail, gameId, edition));
+});
+
+
 router.post('/users/register', (req, res) => {
-	res.json(users.registerUser(req.body.username, req.body.password));
+	res.json(users.registerUser(req.body.username, req.body.email, req.body.password));
 });
 
 router.post('/users/login', (req, res) => {
-	res.json(users.loginUser(req.body.username, req.body.password));
+	const identifier = req.body.email || req.body.username;
+	res.json(users.loginUser(identifier, req.body.password));
+});
+
+router.get('/users/profile', (req, res) => {
+	res.json(users.getUserProfile(req.query.email || req.query.username));
 });
 
 router.get('/users/search', (req, res) => {
 	res.json(users.searchUser(req.query.username));
 });
 
-// on exporte le router pour l'utiliser dans le serveur
 module.exports = router;
-
